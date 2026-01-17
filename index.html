@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine 💖</title>
+
+<style>
+body{
+  margin:0;
+  font-family: "Prompt", sans-serif;
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+  text-align:center;
+  color:#fff;
+}
+
+.page{
+  display:none;
+  min-height:100vh;
+  padding:40px 20px;
+}
+
+.page.active{
+  display:block;
+}
+
+img{
+  width:180px;
+  border-radius:20px;
+  margin:20px 0;
+  box-shadow:0 0 20px rgba(255,255,255,0.5);
+}
+
+button{
+  padding:15px 30px;
+  font-size:20px;
+  border:none;
+  border-radius:30px;
+  background:#ff4b6e;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+  margin:10px;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- เพลง -->
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+</audio>
+
+<!-- หน้า 1 -->
+<div class="page active" id="page1">
+  <h1>💖 Happy Valentine 💖</h1>
+  <p>ถึงคนพิเศษของฉัน 💕</p>
+  <img src="https://i.imgur.com/1Q9Z1Zm.png">
+  <br>
+  <button onclick="goPage(2)">ไปต่อ ➡️</button>
+</div>
+
+<!-- หน้า 2 -->
+<div class="page" id="page2">
+  <h1>🌹 สำหรับเธอ 🌹</h1>
+  <p>
+    เค้าอยากบอกว่า…<br><br>
+    รักเธอมากนะ 💝<br>
+    อยู่ด้วยกันแบบนี้ไปนานๆ เลย 🌷
+  </p>
+</div>
+
+<script>
+function goPage(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page'+n).classList.add('active');
+}
+</script>
+
+</body>
+</html>
